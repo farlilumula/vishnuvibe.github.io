@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Vishnu Vibe</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Packages</a></li>
+            <li><a href="#">Room</a></li>
+            <li><a href="#">About As</a></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png"></a></li>
+            <li><a href="#"><img src="twitter.png"></a></li>
+            <li><a href="#"><img src="instagram.png"></a></li>
+        </ul>
+    </header>
+    <div class="banner">
+        <video src="/video/header.mp4" muted autoplay loop type="mp4"></video>
+        <div class="textBox">
+            <h3>The perfect place to escape</h3>
+            <h2>Countryside for the weekend</h2>
+            <a href="#" class="btn">Book Now</a>
+        </div>
+    </div>
+    <section class="blog">
+        <div class="contentBx">
+            <h3>Escape the city</h3>
+            <h2>Welcome to the quiet eco house. Enjoy and get inspired</h2>
+            <p class="text">
+                Our spacious and comfortable home is perfect for large groups, and we have plenty of outdoor space for
+                kids to run and play. We also have a private pool and hot tub, perfect for relaxing after a long day of
+                hiking or exploring the local area
+            </p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="imgBx">
+            <img src="/image/IMG_E4607.JPG" class="fitBg">
+        </div>
+    </section>
+    <section class="about">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/image/1.JPG" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/image/2.JPG" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/image/3.JPG" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/image/4.JPG" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/image/5.JPG" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/image/6.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/image/7.jpg" />
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js">
+    </script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0)
+        })
+    </script>
+</body>
+
+</html>
